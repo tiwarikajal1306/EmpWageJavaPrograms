@@ -7,20 +7,20 @@ public class EmpWageBuilderObject {
 	private final String company;
 	private final int empRatePerHour;
 	private final int numOfWorkingDays;
-	private final int MaxHoursPerMonth;
+	private final int maxHoursPerMonth;
 	private int totalEmpWage;
 	
-	public EmpWageBuilderObject(String company,int empRatePerHour,int numOfWorkingDays,int MaxHoursPerMonth) {
+	public EmpWageBuilderObject(String company,int empRatePerHour,int numOfWorkingDays,int maxHoursPerMonth) {
 		this.company=company;
 		this.empRatePerHour=empRatePerHour;
 		this.numOfWorkingDays=numOfWorkingDays;
-		this.MaxHoursPerMonth=MaxHoursPerMonth;
+		this.maxHoursPerMonth=maxHoursPerMonth;
 	}
 	
 	public  void computeEmpWage() {
 		int empHrs=0, totalEmpHrs=0, totalWorkingDays=0;
 		
-		while (totalEmpHrs <= MaxHoursPerMonth && totalWorkingDays <= numOfWorkingDays) {
+		while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDays <= numOfWorkingDays) {
 			totalWorkingDays++;
         int empcheck=(int)Math.floor(Math.random() * 10 )%3;
         switch (empcheck) {
